@@ -1,0 +1,30 @@
+@model formulariomatalu.Models.Carreras
+@{
+    ViewData["Title"] = "Carreras";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <form asp-controller="Carreras" asp-action="Escoger">
+        <label asp-for="Carrera1" class="form-label"></label>
+        <input asp-for="Carrera1" class="form-control form-control-sm" type="text" placeholder="Escribe un numero" aria-label=".form-control-sm" />
+
+        <label asp-for="Carrera2" class="control-label"></label>
+        <input asp-for="Carrera2" class="form-control form-control-sm" type="text" placeholder="Escribe un numero" aria-label=".form-control-sm" />
+
+        <label asp-for="Carrera0" class="control-label"></label>
+        <select asp-for="Carrera0" >
+            <option value="1ºcarrera">Ingenieria</option>
+            <option value="2ºcarrera">Medicina|</option>
+            <option value="3ºcarrera">Contabilidad</option>
+            <option value="4ºcarrera">Derecho</option>
+        </select>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Registrar</button> 
+        </div>              
+    </form>
+    <h1>@ViewData["Message"]</h1>
+
+</div>
